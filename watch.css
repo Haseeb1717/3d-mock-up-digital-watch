@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ background-color:#090979;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  perspective: 800px; /* Perspective for 3D transforms */
+}
+
+.watch {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d; /* Preserve 3D transforms */
+  transform: rotateX(-20deg) rotateY(30deg); /* Initial rotation for perspective */
+}
+.watch:hover {
+    transform: translateX(10px); /* Move card 10px to the right on hover */
+}
+.display {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(40px); /* Depth for perspective */
+}
+
+.time {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  position: absolute;
+  background: #fff;
+  transform-origin: 50% 100%; /* Rotation origin at bottom center */
+}
+
+.hour-hand {
+  width: 8px;
+  height: 60px;
+  border-radius: 4px;
+  background: #f44336;
+  transform: rotate(90deg); /* Initial rotation for hour hand */
+}
+
+.minute-hand {
+  width: 4px;
+  height: 80px;
+  border-radius: 2px;
+  background: #4caf50;
+  transform: rotate(180deg); /* Initial rotation for minute hand */
+}
+
+.second-hand {
+  width: 2px;
+  height: 100px;
+  border-radius: 1px;
+  background: #2196f3;
+  transform: rotate(270deg); /* Initial rotation for second hand */
+}
