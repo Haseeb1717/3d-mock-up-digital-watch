@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive 3D Digital Watch Mockup</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="watch">
+  <div class="display">
+    <div class="time" id="time">00:00:00</div>
+    <div class="date" id="date">Jan 1, 2024</div>
+    <div class="buttons">
+      <button onclick="startStop()">Start/Stop</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+  </div>
+  <div class="animation">
+    <div class="hand hour-hand" id="hour-hand"></div>
+    <div class="hand minute-hand" id="minute-hand"></div>
+    <div class="hand second-hand" id="second-hand"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
